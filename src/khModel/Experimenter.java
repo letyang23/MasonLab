@@ -88,18 +88,44 @@ public class Experimenter extends Observer {
 		}
 	}
 
+	// Homework Lab 3
+	public void pairCorrelation(Environment state) {
+		double time = (double) state.schedule.getTime();//get the current time
+		this.upDateTimeChart(0, time, correlation(), true, 1000);//update chart #0 with up to a 1000 milisecond delay
+	}
+
+	public void attractiveness(Environment state) {
+		double time = (double) state.schedule.getTime(); // get the current time
+		if (n > 0) {
+			double meanAttractiveness = (sX + sY) / (2 * n);
+			this.upDateTimeChart(1, time, meanAttractiveness, true, 1000); // update chart #1 with up to a 1000 millisecond delay
+		}
+	}
+
+	public void attractivenessDistribution(Environment state) {
+		Bag agents = state.sparseSpace.allObjects; // get remaining agents
+		double[] data = new double[agents.numObjs]; // This is where attractiveness scores are placed
+		for (int i = 0; i < data.length; i++) {
+			Agent agent = (Agent) agents.objs[i]; // Cast the object to Agent
+			data[i] = agent.attractiveness; // Access the attractiveness attribute and store it in the array
+		}
+		if (agents.numObjs > 0)
+			this.upDateHistogramChart(0, (int) state.schedule.getSteps(), data, 10); // give it the data with a 10 millisecond delay
+	}
+
 	public void step(SimState state) {
 		super.step(state);
-		Environment environment = (Environment)state;
+		Environment environment = (Environment) state;
 		stop(environment);
-
-		if(state.schedule.getSteps() ==0) {
-			System.out.println();//create a return
-			System.out.println("step    %          r       attractiveness");
-			printData(environment);
-		}
-		else
-			printData(environment);
 		populations(environment);
+
+		if (step % this.state.dataSamplingInterval == 0) {//If a sampling interval, record data
+			//set the dataSamplingInterval to 1 in the model tab window when you run this
+			//So that it plots every step
+			pairCorrelation((Environment) state);
+			attractiveness((Environment) state);
+			attractivenessDistribution((Environment) state);
+		}
+
 	}
 }
