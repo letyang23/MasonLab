@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d82e1fed-538a-4072-a632-8546ad93b33f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MasonLab.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/agents/Agent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/agents/AgentsGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/agents/Environment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/agents/Experimenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/agents_120/Agent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/agents_120/AgentsUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/agents_120/Environment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/freezingAggregate/Agent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/freezingAggregate/Environment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/freezingAggregate/UIFA.java" afterDir="false" />
+    <list default="true" id="d82e1fed-538a-4072-a632-8546ad93b33f" name="Changes" comment="PSC Lab2">
+      <change afterPath="$PROJECT_DIR$/src/khModelLab4/Agent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/khModelLab4/AgentsGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/khModelLab4/Environment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/khModelLab4/Experimenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/khModelLab4/Rule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/khModelLab4/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/khModelLab4/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/khModelLab4/modifications.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +25,32 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -49,10 +68,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/YangL/Downloads/jfreechart-1.5.4.jar",
+    "last_opened_file_path": "C:/Users/YangL/IdeaProjects/MasonLab/src/khModel-charts",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -60,6 +80,7 @@
       <recent name="agents" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\YangL\IdeaProjects\MasonLab\src\khModel-charts" />
       <recent name="C:\Users\YangL\IdeaProjects\MasonLab\src\freezingAggregate" />
       <recent name="C:\Users\YangL\IdeaProjects\MasonLab\src\agents_120" />
     </key>
@@ -67,7 +88,7 @@
       <recent name="agents" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.khModelLab4.AgentsGUI">
     <configuration name="AgentsGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="agents.AgentsGUI" />
       <module name="MasonLab" />
@@ -81,8 +102,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="khModelLab4.AgentsGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="khModelLab4.AgentsGUI" />
+      <module name="MasonLab" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="khModelLab4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="khModel.AgentsGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="khModel.AgentsGUI" />
+      <module name="MasonLab" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="khModel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.khModelLab4.AgentsGUI" />
+        <item itemvalue="Application.khModel.AgentsGUI" />
         <item itemvalue="Application.AgentsGUI" />
       </list>
     </recent_temporary>
@@ -95,8 +144,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698449918606</updated>
-      <workItem from="1698449919807" duration="4290000" />
+      <workItem from="1698449919807" duration="5650000" />
+      <workItem from="1699853743867" duration="580000" />
+      <workItem from="1699854330881" duration="964000" />
     </task>
+    <task id="LOCAL-00001" summary="PSC Lab2">
+      <created>1698454609162</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698454609162</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,10 +166,26 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="PSC Lab2" />
+    <option name="LAST_COMMIT_MESSAGE" value="PSC Lab2" />
   </component>
 </project>
