@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d82e1fed-538a-4072-a632-8546ad93b33f" name="Changes" comment="PSC Lab2">
-      <change afterPath="$PROJECT_DIR$/src/khModelLab4/Agent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/khModelLab4/AgentsGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/khModelLab4/Environment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/khModelLab4/Experimenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/khModelLab4/Rule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/khModelLab4/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/khModelLab4/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/khModelLab4/modifications.html" afterDir="false" />
+    <list default="true" id="d82e1fed-538a-4072-a632-8546ad93b33f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MasonLab.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MasonLab.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,32 +23,6 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <excluded-from-favorite>
-      <branch-storage>
-        <map>
-          <entry type="REMOTE">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </excluded-from-favorite>
-    <favorite-branches>
-      <branch-storage>
-        <map>
-          <entry type="REMOTE">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="origin/main" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </favorite-branches>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -62,25 +34,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/YangL/IdeaProjects/MasonLab/src/khModel-charts",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/YangL/Downloads/jfreechart-1.5.4.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="agents" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\YangL\IdeaProjects\MasonLab\src\khModel-charts" />
       <recent name="C:\Users\YangL\IdeaProjects\MasonLab\src\freezingAggregate" />
       <recent name="C:\Users\YangL\IdeaProjects\MasonLab\src\agents_120" />
     </key>
@@ -88,13 +62,26 @@
       <recent name="agents" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.khModelLab4.AgentsGUI">
+  <component name="RunManager" selected="Application.GUI">
     <configuration name="AgentsGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="agents.AgentsGUI" />
       <module name="MasonLab" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="agents.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="evolutionaryGames.GUI" />
+      <module name="MasonLab" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="evolutionaryGames.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -115,23 +102,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="khModel.AgentsGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="khModel.AgentsGUI" />
-      <module name="MasonLab" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="khModel.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GUI" />
         <item itemvalue="Application.khModelLab4.AgentsGUI" />
-        <item itemvalue="Application.khModel.AgentsGUI" />
         <item itemvalue="Application.AgentsGUI" />
       </list>
     </recent_temporary>
@@ -144,18 +118,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698449918606</updated>
-      <workItem from="1698449919807" duration="5650000" />
-      <workItem from="1699853743867" duration="580000" />
-      <workItem from="1699854330881" duration="964000" />
+      <workItem from="1698449919807" duration="4290000" />
+      <workItem from="1699921212909" duration="2105000" />
+      <workItem from="1700528285252" duration="300000" />
     </task>
-    <task id="LOCAL-00001" summary="PSC Lab2">
-      <created>1698454609162</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1698454609162</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,26 +132,21 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="PSC Lab2" />
-    <option name="LAST_COMMIT_MESSAGE" value="PSC Lab2" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/khModelLab4/AgentsGUI.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
