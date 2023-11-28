@@ -137,18 +137,22 @@ public class Experimenter extends Observer {
 	}
 	
 	public void strategyDistribution(Environment state) {
-		//TODO
-		Bag agents = state.sparseSpace.getAllObjects();
+//		if (!state.isCharts()) {
+//			return;
+//		}
+
+		Bag agents = state.sparseSpace.allObjects;
+		if (agents == null || agents.numObjs == 0) {
+			return;
+		}
+
 		double[] strategyData = new double[agents.numObjs];
-
-		for (int i = 0; i < agents.numObjs; i++) {
+		for (int i = 0; i < strategyData.length; i++) {
 			Agent a = (Agent)agents.objs[i];
-			strategyData[i] = a.strategy.id();  // Assuming each strategy has a unique ID
+			strategyData[i] = a.strategy.id();
 		}
 
-		if (agents.numObjs > 0) {
-			this.upDateHistogramChart(0, (int)state.schedule.getSteps(), strategyData, 10); // Update histogram with data
-		}
+		this.upDateHistogramChart(0, (int)state.schedule.getSteps(), strategyData, 100);
 	}
 
 	public void step(SimState state) {

@@ -35,13 +35,21 @@ public class Environment extends SimStateSweep {
 	public boolean localReproduction = true;//reproduce offspring close to parents i.e., within the reproductionRadius
 	public ArrayList<Strategy> mutationList = new ArrayList();//strategies that can be mutants
 	public boolean mutationRange = true;//if true, use the mutationList
+
+	public boolean charts = false;
 	
 	/*
 	 * 
 	 * Getters and Setter begin
 	 */
 
+	public boolean isCharts() {
+		return charts;
+	}
 
+	public void setCharts(boolean charts) {
+		this.charts = charts;
+	}
 
 	public boolean isGroups_or_patches() {
 		return groups_or_patches;
