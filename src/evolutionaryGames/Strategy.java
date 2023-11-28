@@ -5,8 +5,12 @@ public enum Strategy {
 	COOPERATOR (1.0), //not we also assign a double to each strategy
 	DEFECTOR (2.0),
 	WALKAWAY (3.0),
-	WALKAWAYD (4.0);
+	WALKAWAYD (4.0),
 	//TODO: Add other strategies constants
+	TFTM(5.0),
+	TFTS(6.0),
+	PAVLOVM(7.0),
+	PAVLOVS(8.0);
 	/**
 	 * This defines the strategy id
 	 */

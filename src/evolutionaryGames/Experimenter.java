@@ -48,9 +48,20 @@ public class Experimenter extends Observer {
 			case WALKAWAYD:
 				walkawaysD++;
 				break;
-			
-			 //TODO:You need to add cases for four new strategies added for this lab
-			
+
+		//TODO:You need to add cases for four new strategies added for this lab
+			case TFTM:
+				tftm++;
+				break;
+			case TFTS:
+				tfts++;
+				break;
+			case PAVLOVM:
+				pavlovm++;
+				break;
+			case PAVLOVS:
+				pavlovs++;
+				break;
 			}
 		}
 	}
@@ -68,7 +79,10 @@ public class Experimenter extends Observer {
 		walkawaysD = 0;
 		
 		 //TODO:You need to reset the new strategy variables we added to 0
-		 
+		tftm = 0;
+		tfts = 0;
+		pavlovm = 0;
+		pavlovs = 0;
 		return true;
 	}
 	
@@ -87,7 +101,10 @@ public class Experimenter extends Observer {
 		data.add(walkawaysD/total);
 		
 		 //TODO: You need to add to the data the four strategy variables that we added for this lab, just like the previous four
-		 
+		data.add(tftm / total);
+		data.add(tfts / total);
+		data.add(pavlovm / total);
+		data.add(pavlovs / total);
 		return false;
 	}
 
@@ -121,6 +138,17 @@ public class Experimenter extends Observer {
 	
 	public void strategyDistribution(Environment state) {
 		//TODO
+		Bag agents = state.sparseSpace.getAllObjects();
+		double[] strategyData = new double[agents.numObjs];
+
+		for (int i = 0; i < agents.numObjs; i++) {
+			Agent a = (Agent)agents.objs[i];
+			strategyData[i] = a.strategy.id();  // Assuming each strategy has a unique ID
+		}
+
+		if (agents.numObjs > 0) {
+			this.upDateHistogramChart(0, (int)state.schedule.getSteps(), strategyData, 10); // Update histogram with data
+		}
 	}
 
 	public void step(SimState state) {

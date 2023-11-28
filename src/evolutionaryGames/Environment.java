@@ -321,10 +321,19 @@ public class Environment extends SimStateSweep {
 		if(_walkawayD > 0) {
 			mutationList.add(Strategy.WALKAWAYD);
 		}
-		
-		
 		  //TODO:fill in the if then statements for TFTM, TFTS, PAVLOVM, and PAVLOVS
-		
+		if(_tftm > 0) {
+			mutationList.add(Strategy.TFTM);
+		}
+		if(_tfts > 0) {
+			mutationList.add(Strategy.TFTS);
+		}
+		if(_pavlovm > 0) {
+			mutationList.add(Strategy.PAVLOVM);
+		}
+		if(_pavlovs > 0) {
+			mutationList.add(Strategy.PAVLOVS);
+		}
 	}
 	
 	public void makeAgents() {
@@ -383,10 +392,10 @@ public class Environment extends SimStateSweep {
 			agent.colorByStrategy(agent.strategy, this, agent);
 		}
 		//TODO: Uncomment this section once you have add TFTM, TFTS, PAVLOVM, and PAVLOVS to Strategy.java
-		/*
+
 		 for(int i=0;i<_tftm;i++) {
 			Int2D location;
-			if(!groups)
+			if(!groups_or_patches)
 				location = uniqueXY();
 			else
 				location = locationXY();
@@ -401,7 +410,7 @@ public class Environment extends SimStateSweep {
 		}
 		for(int i=0;i<_tfts;i++) {
 			Int2D location;
-			if(!groups)
+			if(!groups_or_patches)
 				location = uniqueXY();
 			else
 				location = locationXY();
@@ -416,7 +425,7 @@ public class Environment extends SimStateSweep {
 		}
 		for(int i=0;i<_pavlovm;i++) {
 			Int2D location;
-			if(!groups)
+			if(!groups_or_patches)
 				location = uniqueXY();
 			else
 				location = locationXY();
@@ -431,7 +440,7 @@ public class Environment extends SimStateSweep {
 		}
 		for(int i=0;i<_pavlovs;i++) {
 			Int2D location;
-			if(!groups)
+			if(!groups_or_patches)
 				location = uniqueXY();
 			else
 				location = locationXY();
@@ -444,22 +453,22 @@ public class Environment extends SimStateSweep {
 			sparseSpace.setObjectLocation(agent,random.nextInt(gridWidth), random.nextInt(gridHeight));
 			agent.colorByStrategy(agent.strategy, this, agent);
 		}
-		for(int i=0;i<_pavlovw;i++) {
-			Int2D location;
-			if(!groups)
-				location = uniqueXY();
-			else
-				location = locationXY();
-			int xdir = random.nextInt(3)-1;
-			int ydir = random.nextInt(3)-1;
-			double resources = (maxResourcesStart-minResourcesStart)*random.nextDouble()+minResourcesStart;
-			long id = this.id++;
-			Agent agent = new Agent(this,id,Strategy.PAVLOVW,resources,location.x,location.y,xdir,ydir,true);
-			agent.event = schedule.scheduleRepeating(agent);
-			sparseSpace.setObjectLocation(agent,random.nextInt(gridWidth), random.nextInt(gridHeight));
-			agent.colorByStrategy(agent.strategy, this, agent);
-		}
-		*/
+//		for(int i=0;i<_pavlovw;i++) {
+//			Int2D location;
+//			if(!groups_or_patches)
+//				location = uniqueXY();
+//			else
+//				location = locationXY();
+//			int xdir = random.nextInt(3)-1;
+//			int ydir = random.nextInt(3)-1;
+//			double resources = (maxResourcesStart-minResourcesStart)*random.nextDouble()+minResourcesStart;
+//			long id = this.id++;
+//			Agent agent = new Agent(this,id,Strategy.PAVLOVW,resources,location.x,location.y,xdir,ydir,true);
+//			agent.event = schedule.scheduleRepeating(agent);
+//			sparseSpace.setObjectLocation(agent,random.nextInt(gridWidth), random.nextInt(gridHeight));
+//			agent.colorByStrategy(agent.strategy, this, agent);
+//		}
+
 		for(int i=0;i<_walkawayD;i++) {
 			Int2D location;
 			if(!groups_or_patches)

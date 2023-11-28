@@ -50,7 +50,9 @@ public class Agent implements Steppable {
 			age = 0;//when born from another agent
 		}
 		//TODO: create memory for memory agents with a switch statement.
-		
+		switch(strategy) {
+			case TFTM: ; case TFTS:; case PAVLOVM:; case PAVLOVS: memory = new Memory(state.memorySize);
+		}
 	}
 
 	/**
@@ -60,39 +62,60 @@ public class Agent implements Steppable {
 	 * @return
 	 */
 	public Strategy getStrategy(Agent opponent) {
-		switch (strategy) {
-		case COOPERATOR:
-			return Strategy.COOPERATOR;
-		case DEFECTOR:
-			return Strategy.DEFECTOR;
-		case WALKAWAY:
-			return Strategy.COOPERATOR;
-		case WALKAWAYD:
-			return Strategy.DEFECTOR;
-
-			//TODO:See lab for instructions to complete
-			
-		default:
-			return Strategy.COOPERATOR;
+		switch(strategy) {
+			case COOPERATOR:
+				return Strategy.COOPERATOR;
+			case DEFECTOR:
+				return Strategy.DEFECTOR;
+			case WALKAWAY:
+				return Strategy.COOPERATOR;
+			case TFTM:; case TFTS:
+				return getStrategyTFT( opponent);
+			case PAVLOVM:; case PAVLOVS:
+				return getStrategyPAVLOV(opponent);
+			case WALKAWAYD:
+				return Strategy.DEFECTOR;
+			default://added for completeness
+				return Strategy.COOPERATOR;
 		}
 	}
 
 	//TODO:See lab for instructions to completeUncomment the block below and see lab instructions to 
 	//complete getStrategyTFT and getStrategyPAVLOV
-	
-	/*
-	 * public Strategy getStrategyTFT(Agent opponent) {
-	 * 
-	 * See lab for instructions to complete
-	 * 
-	 * }
-	 * 
-	 * public Strategy getStrategyPAVLOV(Agent opponent) {
-	 * 
-	 * See lab for instructions to complete
-	 * 
-	 * }
-	 */
+
+	public Strategy getStrategyTFT(Agent opponent) {
+		Triple m = memory.getLastMemory(opponent);
+		if (m == null) {
+			return Strategy.COOPERATOR;//if it has no memory of an agent, it always cooperates
+		}
+		switch (m.opponentStrategy) {//this is what it remembers its opponent strategy was in the last game
+			case COOPERATOR: //opponent cooperated
+				return Strategy.COOPERATOR; //then the agent also cooperates
+			case DEFECTOR://opponent defected
+				return Strategy.DEFECTOR; //then the agent also defects
+			default: //not necessary but here for completeness
+				return Strategy.COOPERATOR;
+		}
+	}
+
+	public Strategy getStrategyPAVLOV(Agent opponent) {
+		Triple m = memory.getLastMemory(opponent);
+		if (m == null) {
+			return Strategy.COOPERATOR;
+		}
+		switch (m.opponentStrategy) {
+			case COOPERATOR:
+				return m.myStrategy;
+			case DEFECTOR:
+				if (m.myStrategy == Strategy.COOPERATOR)
+					return Strategy.DEFECTOR;
+				else
+					return Strategy.COOPERATOR;
+			default:
+				return Strategy.COOPERATOR;
+		}
+	}
+
 
 	/**
 	 * Calculates an agent's payoff given the strategy it played and the strategy of
@@ -132,6 +155,12 @@ public class Agent implements Steppable {
 		//TODO: Good place to add code for remembering an opponent. An agent that
 		// is TFT or PAVLOV must remember the opponent it played.
 		// memory.storeMemory(opponent, myOpponentStrategy, myStrategy);
+
+		// Store memory for TFT and PAVLOV agents
+		if (strategy == Strategy.TFTM || strategy == Strategy.TFTS ||
+				strategy == Strategy.PAVLOVM || strategy == Strategy.PAVLOVS) {
+			memory.storeMemory(opponent, myOpponentStrategy, myStrategy);
+		}
 
 		return myOpponentStrategy;
 	}
@@ -244,19 +273,16 @@ public class Agent implements Steppable {
 	 */
 
 	public void play(Environment state) {
-		switch (strategy) {
-		case COOPERATOR:
-			;
-		case DEFECTOR:
-			mobileStrategy(state);
-			break;
-		case WALKAWAY:
-			;
-		case WALKAWAYD:
-			walkawayStrategy(state);
-			break;
-			
-			//TODO: See lab on instructions how to complete this method.
+		switch(strategy) {//this is the agent's strategy for how it cooperates or defects
+			case COOPERATOR:;case DEFECTOR:;case TFTM:;case PAVLOVM:
+				mobileStrategy(state);//this handles all mobile strategies
+				break;
+			case WALKAWAY:; case WALKAWAYD:
+				walkawayStrategy(state);//this handles the walkaway strategies
+				break;
+			case TFTS:; case PAVLOVS:
+				stationaryStrategy( state);//finally the stationary strategies
+				break;
 		}
 	}
 
@@ -402,7 +428,18 @@ public class Agent implements Steppable {
 			break;
 			
 			//TODO: you will need to add case statements to color the different strategies.
-			
+		case TFTM:
+			state.gui.setOvalPortrayal2DColor(a, (float) 0.5, (float) 0.5, (float) 1, (float) 1);
+			break;
+		case TFTS:
+			state.gui.setOvalPortrayal2DColor(a, (float) 0.5, (float) 1, (float) 0.5, (float) 1);
+			break;
+		case PAVLOVM:
+			state.gui.setOvalPortrayal2DColor(a, (float) 1, (float) 0.5, (float) 0.5, (float) 1);
+			break;
+		case PAVLOVS:
+			state.gui.setOvalPortrayal2DColor(a, (float) 1, (float) 1, (float) 0.5, (float) 1);
+			break;
 		default:
 			state.gui.setOvalPortrayal2DColor(a, (float) 1, (float) 1, (float) 1, (float) 1);
 			break;
