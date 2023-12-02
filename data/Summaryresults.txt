@@ -1,0 +1,52 @@
+Parameter Sweeps
+
+Number of parameters swept: 10
+
+Table of parameters swept 
+public	boolean	groups	true	true	true	true	true	false	false	false	false	false	
+public	double	cooperate_defector	0.0	-0.5	-1.0	-1.5	-2.0	0.0	-0.5	-1.0	-1.5	-2.0	
+
+Parameter values for the class class evolutionaryGamesFinal.Environment
+id  0
+_cooperators  500
+_defectors  500
+_walkawayCooperators  0
+_walkawayDefectors  0
+_tftMobile  0
+_tftStationary  0
+_pavlovMobile  0
+_pavlovStationary  0
+memorySize  3
+active  1.0
+groups  true
+averageAge  50.0
+sdAge  10.0
+mutationRate  0.01
+resoucesToReproduce  30.0
+minResourcesStart  30.0
+maxResourcesStart  30.0
+carryingCapacity  2000.0
+searchRadiusPlayer  1
+cooperate_cooperator  3.0
+defect_defector  0.0
+cooperate_defector  0.0
+defect_cooperator  5.0
+reproductionRadius  1
+lowerBoundsSurvival  0.0
+useLowerBoundsSurvival  true
+localReproduction  true
+mutationRange  true
+charts  true
+nameSpace  SPARSE
+gridWidth  100
+gridHeight  100
+paramSweeps  true
+simLength  2501
+simNumber  10
+fileDataName  results.txt
+folderDataName  data
+dataSamplingInterval  50
+burnIn  0
+scheduleTimeInterval  1.0
+closeProgramAtend  true
+customSweepOnly  false
