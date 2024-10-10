@@ -10,8 +10,6 @@
 
 This project is a Java-based multi-agent simulation framework designed to model and analyze various evolutionary game dynamics and aggregation behaviors. Using the MASON library, it allows for a detailed study of cooperative, competitive, and reproductive strategies among agents in a grid-based environment.
 
-## 
-
 ## Features
 
 - **Agent-Based Modeling**: Simulate complex interactions and behaviors among agents with distinct strategies.
